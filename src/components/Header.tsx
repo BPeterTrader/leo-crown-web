@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.svg";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const location = useLocation();
@@ -68,11 +69,14 @@ const Header = () => {
             </Link>
           </nav>
           
-          <Link to="/contact">
-            <Button variant="premium" size="default">
-              Book Consultation
-            </Button>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/contact" className="hidden md:block">
+              <Button variant="premium" size="default">
+                Book Consultation
+              </Button>
+            </Link>
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </header>

@@ -1,67 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, User, Instagram, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Calendar, User, Instagram, Linkedin, Facebook, Twitter, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogPosts";
 
 const BlogPage = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Dubai Real Estate Market Outlook 2025",
-      excerpt: "Discover the latest trends and predictions for Dubai's luxury real estate market in the coming year.",
-      date: "January 15, 2025",
-      author: "Drupad Shah",
-      image: "/placeholder.svg",
-      category: "Market Insights"
-    },
-    {
-      id: 2,
-      title: "Top 5 Investment Areas in Dubai",
-      excerpt: "Explore the most promising neighborhoods for real estate investment with high ROI potential.",
-      date: "January 10, 2025",
-      author: "Leo Crown Team",
-      image: "/placeholder.svg",
-      category: "Investment Guide"
-    },
-    {
-      id: 3,
-      title: "Understanding Dubai's Golden Visa Program",
-      excerpt: "Learn how property investment can lead to long-term residency in the UAE.",
-      date: "January 5, 2025",
-      author: "Drupad Shah",
-      image: "/placeholder.svg",
-      category: "Legal & Residency"
-    },
-    {
-      id: 4,
-      title: "Luxury Living: Downtown Dubai Penthouses",
-      excerpt: "An exclusive look at the most prestigious penthouse properties in the heart of Dubai.",
-      date: "December 28, 2024",
-      author: "Leo Crown Team",
-      image: "/placeholder.svg",
-      category: "Luxury Properties"
-    },
-    {
-      id: 5,
-      title: "Off-Plan vs Ready Properties: Which is Better?",
-      excerpt: "A comprehensive comparison to help you make the right investment decision.",
-      date: "December 20, 2024",
-      author: "Drupad Shah",
-      image: "/placeholder.svg",
-      category: "Investment Guide"
-    },
-    {
-      id: 6,
-      title: "Financing Your Dubai Property: A Complete Guide",
-      excerpt: "Everything you need to know about mortgages and financing options in the UAE.",
-      date: "December 15, 2024",
-      author: "Leo Crown Team",
-      image: "/placeholder.svg",
-      category: "Finance"
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -123,41 +68,47 @@ const BlogPage = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {post.category}
-                      </span>
+                <Link to={`/blog/${post.slug}`} key={post.id}>
+                  <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full group cursor-pointer">
+                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                          {post.category}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl hover:text-primary transition-colors cursor-pointer">
-                      {post.title}
-                    </CardTitle>
-                    <CardDescription className="flex items-center gap-4 text-sm">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {post.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="h-4 w-4" />
-                        {post.author}
-                      </span>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                    <Button variant="link" className="p-0 h-auto font-semibold">
-                      Read More →
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        {post.title}
+                      </CardTitle>
+                      <CardDescription className="flex flex-wrap items-center gap-3 text-sm">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {post.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <User className="h-4 w-4" />
+                          {post.author}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {post.readTime}
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
+                      <Button variant="link" className="p-0 h-auto font-semibold group-hover:translate-x-1 transition-transform">
+                        Read More →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

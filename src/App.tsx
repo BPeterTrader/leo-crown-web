@@ -13,6 +13,7 @@ import InvestmentStrategy from "./pages/services/InvestmentStrategy";
 import FinancingSolutions from "./pages/services/FinancingSolutions";
 import PortfolioManagement from "./pages/services/PortfolioManagement";
 import LegalSupport from "./pages/services/LegalSupport";
+import BlogPostPage from "./pages/BlogPostPage";
 import NotFound from "./pages/NotFound";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/services/legal-support" element={<LegalSupport />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
