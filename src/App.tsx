@@ -9,6 +9,10 @@ import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import InvestmentStrategy from "./pages/services/InvestmentStrategy";
+import FinancingSolutions from "./pages/services/FinancingSolutions";
+import PortfolioManagement from "./pages/services/PortfolioManagement";
+import LegalSupport from "./pages/services/LegalSupport";
 import NotFound from "./pages/NotFound";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/properties" element={<PropertiesPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/investment-strategy" element={<InvestmentStrategy />} />
+          <Route path="/services/financing-solutions" element={<FinancingSolutions />} />
+          <Route path="/services/portfolio-management" element={<PortfolioManagement />} />
+          <Route path="/services/legal-support" element={<LegalSupport />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />

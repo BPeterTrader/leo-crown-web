@@ -1,37 +1,44 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building2, Calculator, Landmark, PlaneTakeoff, TrendingUp, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Building2,
-    title: "Property Investment Strategy",
+    icon: TrendingUp,
+    title: "Investment Strategy",
     description: "Customized property portfolios designed for your investment goals and risk profile.",
+    link: "/services/investment-strategy",
   },
   {
     icon: Calculator,
-    title: "Financing & Mortgages",
+    title: "Financing Solutions",
     description: "Access to exclusive financing options and competitive mortgage rates for international investors.",
+    link: "/services/financing-solutions",
+  },
+  {
+    icon: Building2,
+    title: "Portfolio Management",
+    description: "Professional management of your real estate investments for optimal returns.",
+    link: "/services/portfolio-management",
+  },
+  {
+    icon: Shield,
+    title: "Legal Support",
+    description: "Comprehensive legal support and compliance guidance throughout your investment journey.",
+    link: "/services/legal-support",
   },
   {
     icon: Landmark,
     title: "International Banking",
     description: "Streamlined banking solutions and account setup for seamless property transactions.",
+    link: "/services",
   },
   {
     icon: PlaneTakeoff,
     title: "Tax & Relocation",
     description: "Expert guidance on tax optimization and relocation services for new residents.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Portfolio Management",
-    description: "Professional management of your real estate investments for optimal returns.",
-  },
-  {
-    icon: Shield,
-    title: "Legal & Compliance",
-    description: "Comprehensive legal support and compliance guidance throughout your investment journey.",
+    link: "/services",
   },
 ];
 
@@ -52,26 +59,29 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card 
-                key={index} 
-                className="group hover:shadow-[0_10px_40px_-10px_hsl(30,48%,56%/0.3)] transition-all duration-300 border-border hover:border-primary/40"
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-[hsl(35,58%,62%)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="h-7 w-7 text-white" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardHeader>
-              </Card>
+              <Link to={service.link} key={index}>
+                <Card 
+                  className="group hover:shadow-[0_10px_40px_-10px_hsl(30,48%,56%/0.3)] transition-all duration-300 border-border hover:border-primary/40 h-full cursor-pointer"
+                >
+                  <CardHeader>
+                    <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-[hsl(35,58%,62%)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <Icon className="h-7 w-7 text-white" />
+                    </div>
+                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                    <CardDescription className="text-base">{service.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             );
           })}
         </div>
         
         <div className="text-center">
-          <Button variant="outline" size="lg">
-            View All Services
-          </Button>
+          <Link to="/services">
+            <Button variant="outline" size="lg">
+              View All Services
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

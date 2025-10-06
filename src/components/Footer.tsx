@@ -90,10 +90,26 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li className="text-white/70">Investment Strategy</li>
-              <li className="text-white/70">Financing Solutions</li>
-              <li className="text-white/70">Portfolio Management</li>
-              <li className="text-white/70">Legal Support</li>
+              <li>
+                <Link to="/services/investment-strategy" className="text-white/70 hover:text-primary transition-colors">
+                  Investment Strategy
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/financing-solutions" className="text-white/70 hover:text-primary transition-colors">
+                  Financing Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/portfolio-management" className="text-white/70 hover:text-primary transition-colors">
+                  Portfolio Management
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/legal-support" className="text-white/70 hover:text-primary transition-colors">
+                  Legal Support
+                </Link>
+              </li>
             </ul>
           </div>
           
