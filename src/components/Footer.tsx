@@ -1,5 +1,6 @@
 import logo from "@/assets/logo.svg";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -33,24 +34,34 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-white/70 hover:text-primary transition-colors">
+                <Link to="/" className="text-white/70 hover:text-primary transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-white/70 hover:text-primary transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#properties" className="text-white/70 hover:text-primary transition-colors">
+                <Link to="/properties" className="text-white/70 hover:text-primary transition-colors">
                   Properties
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="text-white/70 hover:text-primary transition-colors">
-                  Our Team
-                </a>
+                <Link to="/services" className="text-white/70 hover:text-primary transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-white/70 hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-white/70 hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-white/70 hover:text-primary transition-colors">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
