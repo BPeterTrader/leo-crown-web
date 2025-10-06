@@ -72,12 +72,15 @@ const whatsappNumber = "971501234567"; // Replace with Drupad's actual number
 ```
 
 ### Social Media Links
-Update in `src/pages/BlogPage.tsx`:
-- Instagram URL (line 113)
-- LinkedIn URL (line 121)
+✅ **COMPLETED** - All social media links are now live:
+- **Facebook:** https://www.facebook.com/p/Leo-Crown-Estate-61579186532142/
+- **Instagram:** https://www.instagram.com/leocrownestate/
+- **LinkedIn:** https://ae.linkedin.com/company/leo-crown
+- **X (Twitter):** https://x.com/thecrownestate?lang=en
 
-Update in `src/components/Footer.tsx`:
-- Facebook, Instagram, LinkedIn, Twitter buttons (lines 16-27)
+Updated in:
+- `src/components/Footer.tsx` - All 4 platforms linked
+- `src/pages/BlogPage.tsx` - All 4 platforms with buttons
 
 ## 🚀 Current Status
 
@@ -90,7 +93,7 @@ Update in `src/components/Footer.tsx`:
 
 1. **Update WhatsApp Number** - Replace placeholder with Drupad's actual number
 2. **Add Real Blog Content** - Replace sample blog posts with actual content
-3. **Connect Social Media** - Update social media URLs with real accounts
+3. ✅ ~~**Connect Social Media**~~ - **COMPLETED** - All social media URLs connected
 4. **Add Real Property Images** - Replace placeholder images with actual property photos
 5. **Implement Newsletter** - Connect newsletter form to email service (e.g., Mailchimp)
 6. **Add Blog CMS** - Consider integrating a CMS for easy blog management
@@ -104,7 +107,7 @@ Update in `src/components/Footer.tsx`:
 - ✅ Real estate industry-standard multi-page layout
 - ✅ Professional navigation structure
 - ✅ Instant communication via WhatsApp
-- ✅ Social media integration (Instagram & LinkedIn)
+- ✅ Social media integration (Facebook, Instagram, LinkedIn, X/Twitter)
 - ✅ Blog section for content marketing
 - ✅ Clean, modern UI with Tailwind CSS + shadcn/ui
 - ✅ Responsive design
