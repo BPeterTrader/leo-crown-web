@@ -14,18 +14,38 @@ const Footer = () => {
               Your trusted partner in building wealth through strategic real estate investments.
             </p>
             <div className="flex gap-3">
-              <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center">
+              <a 
+                href="https://www.facebook.com/p/Leo-Crown-Estate-61579186532142/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+              >
                 <Facebook className="h-5 w-5" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center">
+              </a>
+              <a 
+                href="https://www.instagram.com/leocrownestate/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+              >
                 <Instagram className="h-5 w-5" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center">
+              </a>
+              <a 
+                href="https://ae.linkedin.com/company/leo-crown" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+              >
                 <Linkedin className="h-5 w-5" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center">
+              </a>
+              <a 
+                href="https://x.com/thecrownestate?lang=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+              >
                 <X className="h-5 w-5" />
-              </button>
+              </a>
             </div>
           </div>
           

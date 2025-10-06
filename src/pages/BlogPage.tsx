@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, User, Instagram, Linkedin } from "lucide-react";
+import { Calendar, User, Instagram, Linkedin, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const BlogPage = () => {
@@ -77,24 +77,42 @@ const BlogPage = () => {
             </p>
             
             {/* Social Media Links */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Button 
                 variant="outline" 
                 size="lg"
                 className="gap-2"
-                onClick={() => window.open('https://instagram.com/leocrown', '_blank')}
+                onClick={() => window.open('https://www.facebook.com/p/Leo-Crown-Estate-61579186532142/', '_blank')}
               >
-                <Instagram className="h-5 w-5" />
-                Follow on Instagram
+                <Facebook className="h-5 w-5" />
+                Facebook
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="gap-2"
-                onClick={() => window.open('https://linkedin.com/company/leocrown', '_blank')}
+                onClick={() => window.open('https://www.instagram.com/leocrownestate/', '_blank')}
+              >
+                <Instagram className="h-5 w-5" />
+                Instagram
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="gap-2"
+                onClick={() => window.open('https://ae.linkedin.com/company/leo-crown', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
-                Connect on LinkedIn
+                LinkedIn
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="gap-2"
+                onClick={() => window.open('https://x.com/thecrownestate?lang=en', '_blank')}
+              >
+                <Twitter className="h-5 w-5" />
+                X (Twitter)
               </Button>
             </div>
           </div>
